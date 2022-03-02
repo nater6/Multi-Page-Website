@@ -1,0 +1,7 @@
+body {
+    background-image: linear-gradient(to bottom , rgb(0, 110, 253), rgb(197, 197, 2))
+}
+
+html {
+    min-height: 100%;
+}
