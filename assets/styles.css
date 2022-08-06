@@ -14,6 +14,10 @@ body {
     overflow-x: hidden;
 }
 
+p {
+    font-size: 100%;
+    margin: 0;
+}
 ::-webkit-scrollbar {
   width: 0.35vw;
 }
@@ -37,10 +41,6 @@ body {
 }
 
 
-p {
-    font-size: 100%;
-    margin: 0;
-}
 /* navbar styling */
 
 .navBar {
@@ -126,10 +126,6 @@ a {
     margin: auto;
 }
 
-.margin {
-    /* margin: 0; */
-}
-
 .langs {
     margin-left: -11vw;
     margin-top: 2%;
@@ -168,12 +164,13 @@ a {
     width: 70%;
     /* border: 0.75vh solid black; */
     margin: 5vh auto;
+    margin-top: 0;
     text-align: center;
 }
 
 .aboutTitle {
     width: 15vw;
-    min-width: 15vw;
+    min-width: 250px;
     margin: 0 auto;
     border-bottom: 0.5vh solid black;
 }
