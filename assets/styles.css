@@ -19,32 +19,30 @@ p {
     margin: 0;
 }
 ::-webkit-scrollbar {
-  width: 0.35vw;
+    width: 0.35vw;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f100;
+    background: #f1f1f100;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(179, 179, 179);;
-  border-radius: 1vh;
-  height: 1vh;
-
+    background: rgb(179, 179, 179);
+    border-radius: 1vh;
+    height: 1vh;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(82, 82, 82);
+    background: rgb(82, 82, 82);
 }
-
 
 /* navbar styling */
 
 .navBar {
-    max-height: 8vh;
+    max-height: 50px;
     width: 100%;
     top: 0;
     left: 0;
@@ -58,7 +56,7 @@ p {
 }
 
 .navBar > * {
-    color: #007ea7
+    color: #007ea7;
 }
 
 .title {
@@ -102,19 +100,24 @@ a {
     margin: 1vw;
 }
 
+
+
 .profilePic {
-    height: 175%;
-    width: 175;
+    height: 12.5%;
+    min-height: 120px;
+    width: 12.5%;
+    min-width: 120px;
     margin: auto;
 }
+.margin {
+    display: inline-block;
+    margin: 0.5vh auto;
+}
 .details {
-    width: 120%;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    display: inline-block;
     text-align: center;
-    margin: 0;
-    margin-left: -1.8vw;
-    
+    margin: 0 auto;
 }
 .verticleCenter {
     margin-top: 40%;
@@ -126,31 +129,39 @@ a {
     margin: auto;
 }
 
+.textCenter {
+    margin: 0 auto;
+}
+
 .langs {
-    margin-left: -11vw;
-    margin-top: 2%;
-    width: 20%;
-    height: 10%;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 5%;
+    /* width: 20%;
+    height: 10%; */
+    display: inline-flex;
+
     color: black;
     text-align: center;
+    margin: 0.5vh auto;
 }
 
 .langs > * {
     margin: 0.5vw;
+    min-width: 100px;
+    min-height: 30px;
+}
+.middleBox {
+    display: inline-flex;
 }
 
-.center {
-    width: 15%;
+/* .center {
+    width: 100vw;
     margin: auto;
-}
+} */
 
 .javascript {
     width: 8vw;
+    height: 5vh;
     background-color: #007ea7;
-    padding: 2%;
+    padding: 4px;
 }
 
 .black {
@@ -160,11 +171,9 @@ a {
 }
 
 .about {
-    height: 30%;
+    height: 40%;
     width: 70%;
-    /* border: 0.75vh solid black; */
-    margin: 5vh auto;
-    margin-top: 0;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -175,56 +184,75 @@ a {
     border-bottom: 0.5vh solid black;
 }
 
-.aboutPara{
+.aboutPara {
     margin: 2%;
+    border: 5px solid rgba(0, 0, 0, 0);
+}
+
+.aboutPara:hover {
+    border: 2px solid black;
+}
+
+.projectTitle {
+    width: 8vw;
+    min-width: 250px;
+    margin: 0 auto;
+    border-bottom: 0.5vh solid black;
 }
 
 .Carousel {
-   margin: auto;
-   margin-bottom: 5vh;
-    height: 20%;
+    margin: auto;
+    margin-bottom: 5vh;
+    height: 35%;
     width: 70%;
     /* border: 1vh solid black; */
     overflow: auto;
     white-space: nowrap;
 }
 
-.indBox{
+.indBox {
     display: inline-block;
     height: 75%;
     width: 20%;
+    min-width: 150px;
     border: 0.25vh solid black;
     /* margin: auto 1vw;*/
     margin: 2vh;
     text-align: center;
 }
-.indBox:hover{
-    display: inline-block;
-    height: 75%;
-    width: 20%;
-    border: 0.25vh solid black;
-    /* margin: auto 1vw;*/
-    margin: 2vh;
-    text-align: center;
+.indBox:hover {
+    cursor: pointer;
+    transform: scale(1.16);
+    border-color: #007da7;
+}
+
+.indBox > a {
+    display: block;
+    margin: 0 auto;
+    text-decoration:none;
+}
+
+.indBox:hover > a {
+    color: #007da7;
 }
 
 .Carousel::-webkit-scrollbar {
-  width: 0.5vh
+    width: 0.5vh;
 }
 
 /* Track */
 .Carousel::-webkit-scrollbar-track {
-  background: #e5000000;
+    background: #e5000000;
 }
 
 /* Handle */
 .Carousel::-webkit-scrollbar-thumb {
-  background: #007ea7;
-  border-radius: 1vh;
-  width: 0.5vh;
+    background: #007ea7;
+    border-radius: 1vh;
+    width: 0.5vh;
 }
 
 /* Handle on hover */
 .Carousel::-webkit-scrollbar-thumb:hover {
-  background: rgb(161, 161, 161);
+    background: #007da7a4;
 }
