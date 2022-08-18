@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Iso&family=Rubik+Maze&display=swap&family=Ubuntu&display=swap&&family=Silkscreen');
 
 * {
     box-sizing: border-box;
@@ -67,26 +68,26 @@ a {
     color: #007ea7;
 }
 
-.fa-square-github{
-   font-size: 200%;
-   color: #007da7;
+.fa-square-github {
+    font-size: 200%;
+    color: #007da7;
 }
 
-.fa-linkedin{
-   font-size: 200%;
-   color: #007da7;
+.fa-linkedin {
+    font-size: 200%;
+    color: #007da7;
 }
 
-.fa-at{
-   font-size: 200%;
-   color: #007da7;
+.fa-at {
+    font-size: 200%;
+    color: #007da7;
 }
 .title {
-    display: table-cell;
-    vertical-align: middle;
+    /* /* display: table-cell; */
+    /* vertical-align: middle; */
     margin: 20% 0;
-    width: 25vw;
-    font-weight: 600;
+    /* width: 25vw; */
+    font-family: 'Silkscreen', cursive;
 }
 .dropdown {
     height: 100%;
@@ -131,9 +132,14 @@ a {
 .profile-details {
     width: 150%;
     min-width: 200px;
-
     text-align: center;
     margin: auto;
+}
+
+.pic-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    color: #007da7;
 }
 
 .lang-titles {
@@ -151,13 +157,13 @@ a {
     padding-bottom: 6px;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
-.lang-boxes > *{
+.lang-boxes > * {
     color: white;
     font-size: 150%;
 }
-
 
 .details {
     width: 100%;
@@ -194,7 +200,6 @@ a {
     display: inline-flex;
 }
 
-
 .black {
     color: white;
     font-weight: 600;
@@ -220,7 +225,6 @@ a {
     border: 5px solid rgba(0, 0, 0, 0);
 }
 
-
 .Carousel {
     margin: auto;
     margin-bottom: 5vh;
@@ -238,11 +242,13 @@ a {
     border: 0.25vh solid black;
     margin: 2vh;
     text-align: center;
+    border-radius: 60px;
 }
 .indBox:hover {
     cursor: pointer;
     transform: scale(1.16);
     border-color: #007da7;
+    border-radius: 60px;
 }
 
 .indBox > a {
