@@ -20,9 +20,10 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 }
 
 func MakeYourGame(w http.ResponseWriter, r *http.Request) {
-	// if r.URL.Path != "/" {
-	// 	r.URL.Path = "/"
-	// }
+	if r.URL.Path != "/makeyourgame" {
+		http.Error(w, "404 Status not found", http.StatusNotFound)
+		return 
+	}
 
 	tplHome := template.Must(template.ParseGlob("templates/makeyourgame.html"))
 

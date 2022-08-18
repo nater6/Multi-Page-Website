@@ -10,13 +10,21 @@ body {
     /* height: 100%; */
     /* width: 97%; */
     margin: 0;
-    background-color: white;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 49%,
+        rgba(116, 221, 219, 0.199) 100%
+    );
     overflow-x: hidden;
 }
 
 p {
     font-size: 100%;
     margin: 0;
+}
+
+a {
+    margin: 1vw;
 }
 ::-webkit-scrollbar {
     width: 0.35vw;
@@ -59,6 +67,20 @@ p {
     color: #007ea7;
 }
 
+.fa-square-github{
+   font-size: 200%;
+   color: #007da7;
+}
+
+.fa-linkedin{
+   font-size: 200%;
+   color: #007da7;
+}
+
+.fa-at{
+   font-size: 200%;
+   color: #007da7;
+}
 .title {
     display: table-cell;
     vertical-align: middle;
@@ -96,23 +118,47 @@ p {
     align-items: center;
 }
 
-a {
-    margin: 1vw;
+.profilePic {
+    display: inline-flex;
+    height: 12.5%;
+    min-height: 175px;
+    width: 30%;
+    min-width: 400px;
+    margin: 0 auto;
+    margin-left: auto;
 }
 
+.profile-details {
+    width: 150%;
+    min-width: 200px;
 
-
-.profilePic {
-    height: 12.5%;
-    min-height: 120px;
-    width: 12.5%;
-    min-width: 120px;
+    text-align: center;
     margin: auto;
 }
-.margin {
+
+.lang-titles {
     display: inline-block;
     margin: 0.5vh auto;
+    font-size: 800;
+    font-weight: bold;
 }
+
+.lang-boxes {
+    display: flex;
+    background-color: #007ea7;
+    width: 8vw;
+    height: 7vh;
+    padding-bottom: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-boxes > *{
+    color: white;
+    font-size: 150%;
+}
+
+
 .details {
     width: 100%;
     display: inline-block;
@@ -123,10 +169,9 @@ a {
     margin-top: 40%;
 }
 
-.sameline {
-    width: 150%;
-    /* display: inline-flex; */
-    margin: auto;
+.center {
+    display: inline-flex;
+    margin: 0 auto;
 }
 
 .textCenter {
@@ -134,17 +179,14 @@ a {
 }
 
 .langs {
-    /* width: 20%;
-    height: 10%; */
     display: inline-flex;
-
     color: black;
     text-align: center;
-    margin: 0.5vh auto;
+    margin: 0 auto;
 }
 
 .langs > * {
-    margin: 0.5vw;
+    margin-right: 0.5vw;
     min-width: 100px;
     min-height: 30px;
 }
@@ -152,17 +194,6 @@ a {
     display: inline-flex;
 }
 
-/* .center {
-    width: 100vw;
-    margin: auto;
-} */
-
-.javascript {
-    width: 8vw;
-    height: 5vh;
-    background-color: #007ea7;
-    padding: 4px;
-}
 
 .black {
     color: white;
@@ -173,6 +204,7 @@ a {
 .about {
     height: 40%;
     width: 70%;
+    min-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
@@ -181,31 +213,19 @@ a {
     width: 15vw;
     min-width: 250px;
     margin: 0 auto;
-    border-bottom: 0.5vh solid black;
 }
 
 .aboutPara {
-    margin: 2%;
+    margin: 1vh auto;
     border: 5px solid rgba(0, 0, 0, 0);
 }
 
-.aboutPara:hover {
-    border: 2px solid black;
-}
-
-.projectTitle {
-    width: 8vw;
-    min-width: 250px;
-    margin: 0 auto;
-    border-bottom: 0.5vh solid black;
-}
 
 .Carousel {
     margin: auto;
     margin-bottom: 5vh;
     height: 35%;
     width: 70%;
-    /* border: 1vh solid black; */
     overflow: auto;
     white-space: nowrap;
 }
@@ -216,7 +236,6 @@ a {
     width: 20%;
     min-width: 150px;
     border: 0.25vh solid black;
-    /* margin: auto 1vw;*/
     margin: 2vh;
     text-align: center;
 }
@@ -229,7 +248,7 @@ a {
 .indBox > a {
     display: block;
     margin: 0 auto;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .indBox:hover > a {
@@ -245,14 +264,12 @@ a {
     background: #e5000000;
 }
 
-/* Handle */
 .Carousel::-webkit-scrollbar-thumb {
     background: #007ea7;
     border-radius: 1vh;
     width: 0.5vh;
 }
 
-/* Handle on hover */
 .Carousel::-webkit-scrollbar-thumb:hover {
     background: #007da7a4;
 }
