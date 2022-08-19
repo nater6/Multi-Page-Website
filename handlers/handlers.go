@@ -8,7 +8,12 @@ import (
 
 func HomePage(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
-		http.Error(w, "404 Status not found", http.StatusNotFound)
+		// http.Error(w, "404 Status not found", http.StatusNotFound)
+		tplErrPage := template.Must(template.ParseGlob("templates/error404.html"))
+
+	if tplErr := tplErrPage.Execute(w, nil); tplErr != nil {
+		fmt.Println("Error Executing the 404 Page",tplErr.Error())
+	}
 		return 
 	}
 
@@ -22,7 +27,11 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 func MakeYourGame(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/makeyourgame" {
 		http.Error(w, "404 Status not found", http.StatusNotFound)
-		return 
+	tplErrPage := template.Must(template.ParseGlob("templates/error404.html"))
+	if tplErr := tplErrPage.Execute(w, nil); tplErr != nil {
+		fmt.Println("Error Executing the 404 Page",tplErr.Error())
+	}
+	return 
 	}
 
 	tplHome := template.Must(template.ParseGlob("templates/makeyourgame.html"))
@@ -31,6 +40,7 @@ func MakeYourGame(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("Error Executing the homepage.html template",err.Error())
 	}
 }
+
 
 
 
