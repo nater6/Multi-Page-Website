@@ -9,11 +9,9 @@
 }
 body {
     margin: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 1) 49%,
-        rgba(116, 221, 219, 0.199) 100%
-    );
+    width: 100vw;
+    background-color: #ededed;
+    background-attachment: fixed;
     overflow-x: hidden;
 }
 
@@ -60,12 +58,15 @@ a {
     border-bottom: 0.5vh solid #007ea7;
     position: fixed;
     z-index: 1;
+}
+
+.navbar-animation{
     animation: fadein 2.5s linear 0s;
 }
 
 .navBar > * {
     color: #007ea7;
-    margin: auto 25px;
+    margin: 25px;
 }
 
 
@@ -74,14 +75,37 @@ a {
     color: #007da7;
 }
 
+.fa-square-github:hover {
+    font-size: 200%;
+    /* color: black;*/
+    animation-name: link-btn;
+animation-fill-mode: forwards;
+animation-duration: 1s;
+}
+
 .fa-linkedin {
     font-size: 200%;
     color: #007da7;
 }
 
+.fa-linkedin:hover{
+/* color: black; */
+animation-name: link-btn;
+animation-fill-mode: forwards;
+animation-duration: 1s;
+}
+
 .fa-envelope {
     font-size: 200%;
     color: #007da7;
+}
+
+.fa-envelope:hover {
+    font-size: 200%;
+    /* color: black; */
+    animation-name: link-btn;
+animation-fill-mode: forwards;
+animation-duration: 1s;
 }
 .title {
     margin: 50px 0;
@@ -111,21 +135,25 @@ a {
 .profile {
     height: 30%;
     width: 100%;
+    min-width: 600px;
     margin: 1vh;
     margin-top: 7vh;
-    padding: 1vh;
+    /* padding:  2.5% 10%; */
     justify-content: center;
     align-items: center;
 }
 
 .profilePic {
     display: inline-flex;
-    height: 12.5%;
+    height: 10%;
     min-height: 175px;
     width: 30%;
     min-width: 400px;
     margin: 0 auto;
     margin-left: auto;
+}
+
+.profilePic-animation{
     transform: translateY(-250%);
     animation-name: slideDisplayDown;
     animation-duration: 1.75s;
@@ -134,6 +162,7 @@ a {
 }
 
 .display-pic{
+    margin: auto;
     opacity: 1;
 }
 
@@ -145,30 +174,38 @@ a {
 }
 
 .pic-text {
-    opacity: 0;
-    animation: fadein 1.5s ease-in 1s 1 normal forwards;
+    opacity: 1;
     font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     color: #007da7;
 }
 
-.lang-titles {
+.pic-text-animation {
     opacity: 0;
+    animation: fadein 1.5s ease-in 1s 1 normal forwards;
+}
+
+.lang-titles {
     display: inline-block;
     margin: 0.5vh auto;
     font-size: 800;
     font-weight: bold;
+}
+
+.lang-titles-animation {
+    opacity: 0;
     animation-name: fadein;
     animation-delay: 1.8s;
     animation-duration: 1.5s ;
     animation-fill-mode: forwards;
+
 }
 
 .lang-boxes {
     display: flex;
     background-color: #007ea7;
     width: 8vw;
-    height: 7vh;
+    height: 6vh;
     padding-bottom: 6px;
     justify-content: center;
     align-items: center;
@@ -226,6 +263,7 @@ a {
 .center {
     display: inline-flex;
     margin: 0 auto;
+    height: 20%;
 }
 
 .textCenter {
@@ -237,6 +275,7 @@ a {
     color: black;
     text-align: center;
     margin: 0 auto;
+    max-width: 350px;
 }
 
 .langs > * {
@@ -266,37 +305,49 @@ a {
     width: 15vw;
     min-width: 250px;
     margin: 0 auto;
+}
+
+.aboutTitle-animation {
     opacity: 0;
     animation-name: fadein;
     animation-delay: 3.25s;
     animation-duration: 1.5s ;
     animation-fill-mode: forwards;
+
 }
 
 .aboutPara {
-    transform: translateY(-50%);
-    opacity: 0;
     margin: 1vh auto;
     border: 5px solid rgba(0, 0, 0, 0);
+}
+
+.aboutPara-animation {
+    transform: translateY(-50%);
+    opacity: 0;
     animation-name:  fade-down;
     animation-duration: 2s;
     animation-delay: 2.75s;
     animation-fill-mode: forwards;
+
 }
 
 .Carousel {
-     transform: translateY(-4vh);
-    opacity: 0;
     margin: auto;
     margin-bottom: 5vh;
     height: 35%;
     width: 70%;
     overflow: auto;
     white-space: nowrap;
+}
+
+.Carousel-animation {
+    opacity: 0;
+    transform: translateY(-4vh);
     animation-name:  fade-down;
     animation-duration: 2s;
     animation-delay: 3.5s;
     animation-fill-mode: forwards;
+
 }
 
 .indBox {
@@ -308,8 +359,10 @@ a {
     margin: 2vh;
     text-align: center;
     border-radius: 60px;
-     transition: all .4s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
+
+
 .indBox:hover > a {
     color: #007da7;
 }
@@ -317,7 +370,6 @@ a {
     cursor: pointer;
     border-color: #007da7;
     border-radius: 60px;
-
      transform: scale(1.15);
 }
 
@@ -380,4 +432,13 @@ a {
 		opacity: 1;
 		transform: translateY(0%);
 	}
+}
+
+@keyframes link-btn {
+    from {
+        color: #007da7;
+    }
+    to{
+        color: black;
+    }
 }
