@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&family=Rubik+Iso&family=Rubik+Maze&display=swap&family=Ubuntu&display=swap&&family=Silkscreen');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 * {
     box-sizing: border-box;
     color: black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
     padding: 0.5vh;
 }
 body {
@@ -132,16 +135,15 @@ animation-duration: 1s;
 
 /* profile section styling */
 
-.profile {
+/* .profile {
     height: 30%;
     width: 100%;
     min-width: 600px;
     margin: 1vh;
     margin-top: 7vh;
-    /* padding:  2.5% 10%; */
     justify-content: center;
     align-items: center;
-}
+} */
 
 .profilePic {
     display: inline-flex;
@@ -162,26 +164,69 @@ animation-duration: 1s;
 }
 
 .display-pic{
-    margin: auto;
+    height: 40vmin;
+    min-height: 150px;
+    width: 40vmin;
+    min-width: 150px;
+    border: 0px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* margin: auto; */
     opacity: 1;
 }
 
 .profile-details {
-    width: 150%;
+    width: 60%;
     min-width: 200px;
-    text-align: center;
-    margin: auto;
+    /* height */
+    /* text-align: center; */
+    /* margin: auto; */
+    margin-left: 1vw;
 }
 
-.pic-text {
-    opacity: 1;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 24px;
+.console-container {
+ 
+  font-family:Khula;
+  font-size:4em;
+  text-align:center;
+  height:fit-content;
+  width: 90%;
+  
+  display:block;
+  /* position:absolute; */
+  color:white;
+  /* margin:auto; */
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  /* top:-0.14em; */
+  left:10px;
+}
+
+#consolePos{
+    opacity: 0;
+}
+
+.detail-text {
     color: #007da7;
 }
 
+.pic-text {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 250%;
+}
+
 .pic-text-animation {
-    opacity: 0;
+    opacity: 1;
     animation: fadein 1.5s ease-in 1s 1 normal forwards;
 }
 
@@ -193,7 +238,7 @@ animation-duration: 1s;
 }
 
 .lang-titles-animation {
-    opacity: 0;
+    opacity: 1;
     animation-name: fadein;
     animation-delay: 1.8s;
     animation-duration: 1.5s ;
@@ -213,38 +258,6 @@ animation-duration: 1s;
     /* z-index: 2; */
 }
 
-.golang {
-    transform: translateY(-1250%);
-    animation-name: slidein;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 1.75s ;
-
-}
-
-.js {
-    transform: translateY(-1250%);
-    animation-name: slidein;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-}
-.php {
-    transform: translateY(-1250%);
-    animation-name: slidein;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 2.25s;
-}
-.sql {
-    transform: translateY(-1250%);
-    animation-name: slidein;
-    animation-duration: 1.5s;
-    animation-fill-mode: forwards;
-    animation-delay: 2.5s;
-}
-
-
 .lang-boxes > * {
     color: white;
     font-size: 150%;
@@ -261,9 +274,12 @@ animation-duration: 1s;
 }
 
 .center {
-    display: inline-flex;
+    display: flex;
     margin: 0 auto;
-    height: 20%;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .textCenter {
@@ -307,29 +323,13 @@ animation-duration: 1s;
     margin: 0 auto;
 }
 
-.aboutTitle-animation {
-    opacity: 0;
-    animation-name: fadein;
-    animation-delay: 3.25s;
-    animation-duration: 1.5s ;
-    animation-fill-mode: forwards;
 
-}
 
 .aboutPara {
-    margin: 1vh auto;
+    margin: 0.25vh auto;
     border: 5px solid rgba(0, 0, 0, 0);
 }
 
-.aboutPara-animation {
-    transform: translateY(-50%);
-    opacity: 0;
-    animation-name:  fade-down;
-    animation-duration: 2s;
-    animation-delay: 2.75s;
-    animation-fill-mode: forwards;
-
-}
 
 .Carousel {
     margin: auto;
@@ -340,15 +340,7 @@ animation-duration: 1s;
     white-space: nowrap;
 }
 
-.Carousel-animation {
-    opacity: 0;
-    transform: translateY(-4vh);
-    animation-name:  fade-down;
-    animation-duration: 2s;
-    animation-delay: 3.5s;
-    animation-fill-mode: forwards;
 
-}
 
 .indBox {
     display: inline-block;
@@ -359,7 +351,6 @@ animation-duration: 1s;
     margin: 2vh;
     text-align: center;
     border-radius: 60px;
-    transition: all 0.25s ease-in-out;
 }
 
 
@@ -397,48 +388,4 @@ animation-duration: 1s;
 
 .Carousel::-webkit-scrollbar-thumb:hover {
     background: #007da7a4;
-}
-
-@keyframes fadein {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
-@keyframes slideDisplayDown {
-    0%{
-    transform: translateY(-250%);
-    }
-    100% {
-    transform: translateY(0vh);
-    }   
-}
-
-@keyframes slidein {
-    0% {
-        transform: translateY(-1250%);
-    }
-
-    100% {
-        transform: translateY(0vh);
-    }
-}
-
-@keyframes fade-down {
-	0% {
-		opacity: 0;
-		transform: translateY(-25%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0%);
-	}
-}
-
-@keyframes link-btn {
-    from {
-        color: #007da7;
-    }
-    to{
-        color: black;
-    }
 }
