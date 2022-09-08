@@ -6,14 +6,14 @@
 
 * {
     box-sizing: border-box;
-    color: black;
+    color: white;
     font-family: 'Lexend Deca', sans-serif;
     padding: 0.5vh;
 }
 body {
     margin: 0;
     width: 100vw;
-    background-color: #ededed;
+    background-color: #000626;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -39,7 +39,6 @@ a {
 ::-webkit-scrollbar-thumb {
     background: rgb(179, 179, 179);
     border-radius: 1vh;
-    height: 1vh;
 }
 
 /* Handle on hover */
@@ -50,100 +49,49 @@ a {
 /* navbar styling */
 
 .navBar {
-    max-height: 50px;
-    width: 100%;
-    top: 0;
-    left: 0;
     display: flex;
-    background-color: white;
+    position: fixed;
+    width: 90%;
+    max-height: 50px;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    border-bottom: 0.5vh solid #007ea7;
-    position: fixed;
-    z-index: 1;
+    top: 0;
+    background-color: #00082e;
+    border-bottom: 0.5vh solid white;
 }
 
-.navbar-animation{
-    animation: fadein 2.5s linear 0s;
-}
 
 .navBar > * {
-    color: #007ea7;
+    color: white;
     margin: 25px;
 }
 
 
 .fa-square-github {
     font-size: 200%;
-    color: #007da7;
+    color: white;
 }
 
-.fa-square-github:hover {
-    font-size: 200%;
-    /* color: black;*/
-    animation-name: link-btn;
-animation-fill-mode: forwards;
-animation-duration: 1s;
-}
 
 .fa-linkedin {
     font-size: 200%;
-    color: #007da7;
+    color: white;
 }
 
-.fa-linkedin:hover{
-/* color: black; */
-animation-name: link-btn;
-animation-fill-mode: forwards;
-animation-duration: 1s;
-}
 
 .fa-envelope {
     font-size: 200%;
-    color: #007da7;
+    color: white;
 }
 
-.fa-envelope:hover {
-    font-size: 200%;
-    /* color: black; */
-    animation-name: link-btn;
-animation-fill-mode: forwards;
-animation-duration: 1s;
-}
 .title {
     margin: 50px 0;
     /* width: 25vw; */
     font-family: 'Silkscreen', cursive;
 }
-.dropdown {
-    height: 100%;
-    width: 25vw;
-}
 
-.dropbtn {
-    background-color: rgb(0, 0, 0, 0);
-    color: white;
-    padding: 16px;
-    font-size: 75%;
-    border: none;
-    vertical-align: middle;
-    height: 100%;
-}
-.dropbtn:hover {
-    color: #9f9f9f;
-}
-
-/* profile section styling */
-
-/* .profile {
-    height: 30%;
-    width: 100%;
-    min-width: 600px;
-    margin: 1vh;
-    margin-top: 7vh;
-    justify-content: center;
-    align-items: center;
-} */
+/*Pic and title section*/
 
 .profilePic {
     display: inline-flex;
@@ -155,23 +103,12 @@ animation-duration: 1s;
     margin-left: auto;
 }
 
-.profilePic-animation{
-    transform: translateY(-250%);
-    animation-name: slideDisplayDown;
-    animation-duration: 1.75s;
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-}
-
 .display-pic{
     height: 40vmin;
     min-height: 150px;
     width: 40vmin;
     min-width: 150px;
-    border: 0px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* margin: auto; */
-    opacity: 1;
 }
 
 .profile-details {
@@ -184,50 +121,25 @@ animation-duration: 1s;
 }
 
 .console-container {
- 
   font-family:Khula;
   font-size:4em;
   text-align:center;
   height:fit-content;
   width: 90%;
-  
   display:block;
-  /* position:absolute; */
-  color:white;
-  /* margin:auto; */
 }
 .console-underscore {
-   display:inline-block;
-  position:relative;
-  /* top:-0.14em; */
-  left:10px;
+    display:inline-block;
+    position:relative;
+}
+
+.pos{
+    color: #b9b9b9dd ;
 }
 
 #consolePos{
     opacity: 0;
-}
-
-.detail-text {
-    color: #007da7;
-}
-
-.pic-text {
-    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
-  background-size: cover;
-  color: transparent;
-  background-clip: text;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
-  font-size: 120px;
-  margin: 10px 0;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 250%;
-}
-
-.pic-text-animation {
-    opacity: 1;
-    animation: fadein 1.5s ease-in 1s 1 normal forwards;
+    color: #b9b9b9dd;
 }
 
 .lang-titles {
@@ -237,14 +149,7 @@ animation-duration: 1s;
     font-weight: bold;
 }
 
-.lang-titles-animation {
-    opacity: 1;
-    animation-name: fadein;
-    animation-delay: 1.8s;
-    animation-duration: 1.5s ;
-    animation-fill-mode: forwards;
 
-}
 
 .lang-boxes {
     display: flex;
@@ -276,7 +181,7 @@ animation-duration: 1s;
 .center {
     display: flex;
     margin: 0 auto;
-    height: 100vh;
+    height: 65vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -288,7 +193,7 @@ animation-duration: 1s;
 
 .langs {
     display: inline-flex;
-    color: black;
+    color: white;
     text-align: center;
     margin: 0 auto;
     max-width: 350px;
@@ -347,7 +252,7 @@ animation-duration: 1s;
     height: 75%;
     width: 20%;
     min-width: 150px;
-    border: 0.25vh solid black;
+    border: 0.25vh solid white;
     margin: 2vh;
     text-align: center;
     border-radius: 60px;
@@ -372,18 +277,12 @@ animation-duration: 1s;
 
 
 .Carousel::-webkit-scrollbar {
-    width: 0.5vh;
-}
-
-/* Track */
-.Carousel::-webkit-scrollbar-track {
-    background: #e5000000;
+    width: 10px;
 }
 
 .Carousel::-webkit-scrollbar-thumb {
-    background: #007ea7;
-    border-radius: 1vh;
-    width: 0.5vh;
+    background: grey;
+    border-radius: 25px;
 }
 
 .Carousel::-webkit-scrollbar-thumb:hover {
