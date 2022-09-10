@@ -111,7 +111,7 @@ a {
     margin-left: auto;
 }
 
-.display-pic-holder{
+.display-pic-holder {
     display: flex;
 }
 
@@ -291,10 +291,12 @@ a {
     html {
         min-width: 100%;
         min-height: 100%;
+        overflow-x: hidden;
     }
     body {
         width: inherit;
         height: inherit;
+        overflow-x: hidden;
     }
 
     .navBar {
@@ -306,20 +308,25 @@ a {
         width: 100%;
         min-width: 300px;
         height: 70%;
-        margin: 0;
+        margin-bottom: 2vh;
     }
 
     .display-pic {
         width: 20%;
-        margin: 10vh auto 0 auto;
-        
+        margin: 15vh auto 0 auto;
     }
 
     .profile-details {
         margin: auto;
+        max-height: 200px;
     }
 
     .console-container {
         margin: auto;
+        max-height: 84px;
+    }
+
+    .stack {
+        margin-top: 2vh;
     }
 }
