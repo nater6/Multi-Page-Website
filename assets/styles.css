@@ -13,7 +13,8 @@
 body {
     margin: 0;
     width: 100vw;
-    background-color: #000626;
+    min-width: 750px;
+    background-color: #000419;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -51,34 +52,30 @@ a {
 .navBar {
     display: flex;
     position: fixed;
-    width: 90%;
+    width: 100vw;
     max-height: 50px;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
     top: 0;
-    background-color: #00082e;
+    background-color: #00041a;
     border-bottom: 0.5vh solid white;
+    z-index: 10;
 }
-
 
 .navBar > * {
     color: white;
     margin: 25px;
 }
 
-
 .fa-square-github {
     font-size: 200%;
     color: white;
 }
 
-
 .fa-linkedin {
     font-size: 200%;
     color: white;
 }
-
 
 .fa-envelope {
     font-size: 200%;
@@ -93,6 +90,16 @@ a {
 
 /*Pic and title section*/
 
+.center {
+    display: flex;
+    height: 60vh;
+    min-height: 275px;
+    width: 100vw;
+    min-width: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
 .profilePic {
     display: inline-flex;
     height: 10%;
@@ -103,115 +110,90 @@ a {
     margin-left: auto;
 }
 
-.display-pic{
+.display-pic {
     height: 40vmin;
-    min-height: 150px;
+    min-height: 210px;
     width: 40vmin;
-    min-width: 150px;
+    min-width: 210px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .profile-details {
     width: 60%;
-    min-width: 200px;
-    /* height */
-    /* text-align: center; */
-    /* margin: auto; */
+    min-width: 650px;
     margin-left: 1vw;
 }
 
 .console-container {
-  font-family:Khula;
-  font-size:4em;
-  text-align:center;
-  height:fit-content;
-  width: 90%;
-  display:block;
+    font-family: Khula;
+    font-size: 4em;
+    text-align: center;
+    height: fit-content;
+    width: 90%;
+    display: block;
 }
 .console-underscore {
-    display:inline-block;
-    position:relative;
+    display: inline-block;
+    position: relative;
 }
 
-.pos{
-    color: #b9b9b9dd ;
+.pos {
+    color: #b9b9b9dd;
 }
 
-#consolePos{
+#consolePos {
     opacity: 0;
     color: #b9b9b9dd;
 }
 
-.lang-titles {
-    display: inline-block;
-    margin: 0.5vh auto;
-    font-size: 800;
-    font-weight: bold;
-}
+/*Langaue and experience section*/
 
-
-
-.lang-boxes {
-    display: flex;
-    background-color: #007ea7;
-    width: 8vw;
-    height: 6vh;
-    padding-bottom: 6px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    /* z-index: 2; */
-}
-
-.lang-boxes > * {
-    color: white;
-    font-size: 150%;
-}
-
-.details {
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
-}
-.verticleCenter {
-    margin-top: 40%;
-}
-
-.center {
-    display: flex;
-    margin: 0 auto;
-    height: 65vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
-}
-
-.textCenter {
-    margin: 0 auto;
+.stack {
+    height: 20vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
 }
 
 .langs {
-    display: inline-flex;
-    color: white;
-    text-align: center;
-    margin: 0 auto;
-    max-width: 350px;
+    height: 20vh;
+    width: 35vw;
+    min-width: 325px;
 }
 
-.langs > * {
-    margin-right: 0.5vw;
-    min-width: 100px;
-    min-height: 30px;
-}
-.middleBox {
-    display: inline-flex;
+.lang-title {
+    color: #b9b9b9dd;
+    width: inherit;
+    height: 7vh;
+    min-height: 35px;
+    border-bottom: 5px solid #b9b9b9dd;
 }
 
-.black {
-    color: white;
-    font-weight: 600;
+.right {
+    float: right;
+}
+
+.half-text {
+    font-size: 125%;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+}
+.left-auto {
     font-size: 100%;
+    margin-left: auto;
+}
+
+.right-auto {
+    font-size: 100%;
+    margin-right: auto;
+}
+
+.gql-logo {
+    height: 25px;
+    width: 25px;
 }
 
 .about {
@@ -220,21 +202,27 @@ a {
     min-width: 600px;
     margin: 0 auto;
     text-align: center;
+    padding-bottom: 3vh;
 }
 
 .aboutTitle {
-    width: 15vw;
-    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    width: 10vw;
+    min-width: 175px;
+    /* color: #b9b9b9dd; */
+    font-size: 32px;
     margin: 0 auto;
 }
-
-
 
 .aboutPara {
     margin: 0.25vh auto;
     border: 5px solid rgba(0, 0, 0, 0);
 }
 
+.details {
+    padding: 10px;
+}
 
 .Carousel {
     margin: auto;
@@ -243,30 +231,27 @@ a {
     width: 70%;
     overflow: auto;
     white-space: nowrap;
+    padding-bottom: 25px;
 }
-
-
 
 .indBox {
     display: inline-block;
     height: 75%;
     width: 20%;
-    min-width: 150px;
+    min-width: 200px;
     border: 0.25vh solid white;
     margin: 2vh;
     text-align: center;
     border-radius: 60px;
+    word-wrap: break-word;
 }
 
-
-.indBox:hover > a {
-    color: #007da7;
-}
 .indBox:hover {
     cursor: pointer;
-    border-color: #007da7;
+    border-color: #b9b9b9dd;
     border-radius: 60px;
-     transform: scale(1.15);
+    transform: scale(1.25);
+    transition: 0.3s;
 }
 
 .indBox > a {
@@ -275,16 +260,64 @@ a {
     text-decoration: none;
 }
 
-
 .Carousel::-webkit-scrollbar {
-    width: 10px;
+    height: 0.35vw;
 }
 
-.Carousel::-webkit-scrollbar-thumb {
-    background: grey;
-    border-radius: 25px;
+.hidden {
+    opacity: 0;
 }
 
-.Carousel::-webkit-scrollbar-thumb:hover {
-    background: #007da7a4;
+.fade {
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media all and (max-width: 480px) {
+    html {
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    body {
+        width: inherit;
+        height: inherit;
+        overflow-x: hidden;
+        margin: 0;
+    }
+
+    .navBar {
+        width: 100%;
+    }
+
+    .center {
+        /* display: block; */
+        width: 80%;
+        min-width: 300px;
+        height: 40%;
+    }
+
+    .display-pic {
+        margin-left: 0 auto;
+    }
+
+    .profile-details {
+        margin: auto;
+    }
+
+    .console-container {
+        margin: auto;
+    }
 }

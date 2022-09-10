@@ -1,7 +1,3 @@
-function openHomePage() {
-    window.location.href = 'homepage.html';
-}
-
 function consoleText(text, textID, underscoreID) {
     let letterCount = 1;
     let x = 1;
@@ -28,7 +24,6 @@ function consoleText(text, textID, underscoreID) {
                 0,
                 target.innerHTML.length
             );
-            console.log('underscore ID: ', underscoreID);
             const UNDERSCORE = document.getElementById(underscoreID[0]);
             UNDERSCORE.remove();
             if (text.length > 1) {
@@ -44,3 +39,21 @@ consoleText(
     ['name', 'position'],
     ['consoleName', 'consolePos']
 );
+
+let observer = new IntersectionObserver(
+    (valChanger) => {
+        valChanger.forEach((entry) => {
+            if (entry.isIntersecting === true) {
+                console.log('CURRENTLY INTERSECTING: ', entry.target);
+                if (entry.target.classList.contains('hidden')) {
+                    entry.target.classList.remove('hidden');
+                    entry.target.classList.add('fade');
+                }
+            }
+        });
+    },
+    { threshold: [0.5] }
+);
+
+const sections = document.querySelectorAll('section');
+sections.forEach((section) => observer.observe(section));
