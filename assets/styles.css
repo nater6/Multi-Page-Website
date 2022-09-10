@@ -13,7 +13,7 @@
 body {
     margin: 0;
     width: 100vw;
-    min-width: 750px;
+    /* min-width: 750px; */
     background-color: #000419;
     background-attachment: fixed;
     overflow-x: hidden;
@@ -152,6 +152,7 @@ a {
 
 .stack {
     height: 20vh;
+    min-width: 700px;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
@@ -289,44 +290,110 @@ a {
 
 @media all and (max-width: 480px) {
     html {
-        min-width: 100%;
-        min-height: 100%;
-        overflow-x: hidden;
+        width: 100vw;
+        height: 100vh;
+        /* overflow-x: hidden; */
     }
     body {
-        width: inherit;
-        height: inherit;
-        overflow-x: hidden;
+        width: 100vw;
+        max-width: 480px;
+        height: 100vh;
+        /* overflow-x: hidden; */
     }
 
     .navBar {
         width: 100%;
     }
 
+    .title{
+        font-size: 14px;
+    }
+
     .center {
         display: block;
-        width: 100%;
-        min-width: 300px;
-        height: 70%;
+        min-width: 0px;
+        width: 100%; 
+        min-height: 0px;
+        height: 55%;
+        margin: 0;
         margin-bottom: 2vh;
     }
 
+
     .display-pic {
-        width: 20%;
-        margin: 15vh auto 0 auto;
+        /* width: 20%; */
+        min-width: 0;
+        min-height: 0;
+        height: 125px;
+        width: 125px;
+        margin: 10vh auto 0 auto;
     }
 
     .profile-details {
+        min-width: 0;
+        min-height: 0;
+        width: 100%;
         margin: auto;
         max-height: 200px;
     }
 
+    .detail-text{
+        font-size: 20px;
+    }
+
+    .console-underscore{
+        font-size: 20px;
+    }
+
     .console-container {
-        margin: auto;
-        max-height: 84px;
+        margin: -20px auto 0 auto;
+        min-width: 0;
+        min-height: 0;
+        height: 40px;
     }
 
     .stack {
         margin-top: 2vh;
+        min-width: 0;
+        min-height: 0;
+        width: 100%;
+        height: 30%;
+    }
+
+    .langs{
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .langs-holder {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .flex{
+        display: block;
+    }
+
+    .gql-logo {
+        display: none;
+    }
+
+    .fade {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .about{
+        min-width: 0;
+        min-height: 0;
+        width: 100%;
+    }
+
+    .aboutPara{
+        font-size: 14px;
+    }
+
+    .indBox {
+        width: 75px;
     }
 }
