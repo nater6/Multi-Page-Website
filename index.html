@@ -47,7 +47,7 @@
                     <div class="langs">
                          <div class="experience-holders" >
                              <p class="lang-title"><span class="half-text" >Experience</span></p>
-                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php gap"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database gap"></i>SQL</p><p class="right-auto flex same"><img class="gql-logo gap" src="./assets/images/gql-logo.png"><span class="gql">graphQL</span></p></div>
+                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php gap"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database gap"></i>SQL</p><p class="right-auto flex same"><img class="gql-logo gap" src="./assets/images/gql-logo.png"><span class="gql">graphQL</span></p><p class="right-auto flex same"><i class="fa-brands fa-docker"></i><span class="gql">Docker</span></p></div>
                          </div>
                     </div>
                 </section>
@@ -71,26 +71,30 @@
                 <p >Make-Your-Game</p>
                 <p>Javascript</p>
             </button>
-            <button class="indBox" id="lemin" onclick="OpenProjectModal()">
+            <button class="indBox" id="lemin" onclick="OpenProjectModal(id)">
                 <p>Lemin</p>
                 <p>GO</p>
             </button>
-            <button class="indBox" id="misterquiz" onclick="OpenProjectModal()">
+            <button class="indBox" id="misterquiz" onclick="OpenProjectModal(id)">
                 <p>Mister-Quiz</p>
                 <p>PHP</p>
             </button>
-            <button class="indBox" id="forum" onclick="OpenProjectModal()">
+            <button class="indBox" id="forum" onclick="OpenProjectModal(id)">
                 <p>Forum</p>
                 <p>GO & JS</p>
             </button>
 
-            <button class="indBox" id="groupietracker" onclick="OpenProjectModal()">
+            <button class="indBox" id="groupietracker" onclick="OpenProjectModal(id)">
                 <p>Groupie Tracker</p>
                 <p>GO</p>
             </button>
-            <button class="indBox" id="asciiartweb" onclick="OpenProjectModal()">
+            <button class="indBox" id="asciiartweb" onclick="OpenProjectModal(id)">
                 <p>Ascii-Art-Web</p>
                 <p>GO</p>
+            </button>
+            <button class="indBox" id="graphQL" onclick="OpenProjectModal(id)">
+                <p>GraphQL</p>
+                <p>React</p>
             </button>
         </div>
     </section>
@@ -99,55 +103,20 @@
     </section>
     <section class="project-overview">
         <!-- <div class="project-desc"> -->
-            <div class="pro-title"><p class="pro-name">Title</p><button class="close" onclick="CloseProjectModal()">&#10006;</button></div>
-            <div class="pro-link"><a class="pro-github" target="_blank">See Github Repository</a></div>
-            <div class="pro-langs"><p class="auto">Language Here</p></div>
-            <div class="pro-pics">
+            <div class="pro-title"><p class="pro-name" id="pop-up-title">Title</p><button class="close" onclick="CloseProjectModal()">&#10006;</button></div>
+            <div class="pro-link"><a class="pro-github" target="_blank" id="pop-up-repo">See Github Repository</a></div>
+            <div class="pro-langs"><p class="auto" id="pop-up-lang"></p></div>
+            <div class="pro-pics" id="pop-up-pics">
                 <div class="screenshot"></div>
                 <div class="screenshot"></div>
                 <div class="screenshot"></div>
             </div>
-            <div class="pro-desc">
-            This is a description of the project. This is a description of the project. This is a description of the project.
-            This is a description of the project. This is a description of the project. This is a description of the project.
-
+            <div class="pro-desc" id="pop-up-desc">
             </div>
-            <div class="pro-details">
-                <div class="pro-list pro-skills">
+                <div class="pro-list" >
                     <p class="list-title">Skills</p>
-                    <ul>
-                        <li>Coding</li>
-                        <li>Design</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Coding</li>
-                        <li>Design</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-
+                    <ul id="pop-up-skills">
                     </ul>
-                </div>
-
-                <div class="pro-list pro-features">
-                    <p class="list-title">Features</p>
-                    <ul>
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                        <li>Feature 4</li>
-                        <li>Feature 5</li>
-                        <li>Feature 1</li>
-                        <li>Feature 2</li>
-                        <li>Feature 3</li>
-                        <li>Feature 4</li>
-                        <li>Feature 5</li>
-
-                    </ul>
-                </div>
-            </div>
-        <!-- </div> -->
 
     </section>
         <script src="home.js"></script>

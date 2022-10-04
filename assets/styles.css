@@ -131,6 +131,7 @@ a {
     width: 40vmin;
     min-width: 210px;
     max-width: 230px;
+    border-radius: 50%;
 }
 
 .profile-details {
@@ -397,15 +398,14 @@ a {
     width: 70%;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .screenshot {
-    height: 90%;
-    min-height: 100px;
-    width: 30%;
-    min-width: 33px;
+    height: 100px;
+    width: 200px;
     background-color: aliceblue;
-    margin: auto;
+    margin: 1vh auto;
 }
 
 .pro-desc {
@@ -425,12 +425,14 @@ a {
 }
 
 .pro-list {
-    height: 200px;
+    max-height: 200px;
+    height: fit-content;
     width: 40%;
     min-width: 150px;
     overflow-y: auto;
     border: 3px solid #b9b9b9dd;
     border-radius: 5px;
+    margin: auto;
 }
 
 .pro-list::-webkit-scrollbar-thumb {
