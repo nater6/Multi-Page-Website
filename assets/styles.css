@@ -372,6 +372,7 @@ a {
 .pro-link {
     width: fit-content;
     margin: auto;
+    text-align: center;
 }
 
 .pro-github {
@@ -594,12 +595,12 @@ a {
 
     .close {
         color: white;
-        transform: scale(1.1);
+        transform: scale(1.75);
     }
 
     .screenshot {
-        width: 75%;
-        height: 50%;
+        width: 100%;
+        height: 15vh;
         margin: 1vh auto;
     }
 
