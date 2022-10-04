@@ -3,9 +3,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <script src="https://kit.fontawesome.com/56de4e78e1.js" crossorigin="anonymous"></script>
-        <link rel="icon" href=".\assets\NRicon.png" >
+        <link rel="icon" href=".\assets/images\NRicon.png" >
         <link rel="stylesheet" href="/assets/styles.css" />
-        <title>Nathaniel Russell</title>
+        <title>Nate Russell</title>
 
     </head>
 
@@ -18,10 +18,11 @@
                 target="_blank"
                 ><i class="fa-brands fa-linkedin"></i></a
             >
-            <a href="https://github.com/nater6" target="_blank"><i class="fa-brands fa-square-github"></i> </a>
+            <a href="https://www.github.com/nater6"
+                target="_blank"><i class="fa-brands fa-square-github"></i> </a>
         </header>
             <div class="center">
-                    <div class="display-pic-holder"><img src="/assets/webpagePP.jpg" class="display-pic" /></div>
+                    <div class="display-pic-holder"><img src="/assets/images/webpagePP.jpg" class="display-pic" /></div>
                     <div class="profile-details">
                             <div class='console-container'>
                                 <span id='name' class="detail-text"></span>
@@ -39,36 +40,23 @@
                     <div class="langs">
                         <div class="lang-holders" >
                             <p class="lang-title"><span class="right half-text">Langauges</span></p>
-                            <div class="flex"><p class="left-auto flex"><i class="fa-brands fa-golang"></i>GoLang</p><p class="left-auto flex"><i class="fa-brands fa-square-js"></i>JavaScript</p></div>
+                            <div class="flex"><p class="left-auto flex"><i class="fa-brands fa-golang gap"></i>GoLang</p><p class="left-auto flex"><i class="fa-brands fa-square-js gap"></i>JavaScript</p></div>
                         </div>
                     </div>
                     
                     <div class="langs">
                          <div class="experience-holders" >
                              <p class="lang-title"><span class="half-text" >Experience</span></p>
-                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database"></i>SQL</p><p class="right-auto flex"><img class="gql-logo" src="./assets/gql-logo.png">graphQL</p></div>
+                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php gap"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database gap"></i>SQL</p><p class="right-auto flex same"><img class="gql-logo gap" src="./assets/images/gql-logo.png"><span class="gql">graphQL</span></p></div>
                          </div>
                     </div>
                 </section>
 
         <section class="hidden">
         <div class="about">
-            <h1 class="aboutTitle">About Me</h1>
+            <h1 class="aboutTitle">Efficiency. Simplicity. Functionality.</h1>
             <p class="aboutPara">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                I am a software developer who writes code to solve problems. I focus on writing efficient code, that anyone can understand.
             </p>
         </div>
         </section>
@@ -79,33 +67,91 @@
             <h1 class="aboutTitle">Projects</h1>
         </div>
         <div class="Carousel">
-            <div class="indBox">
-                <a href="https://github.com/nater6/make-your-game" target="_blank">Make-Your-Game</a>
-                <a href="https://github.com/nater6/make-your-game" target="_blank">Javascript</a>
-            </div>
-            <div class="indBox">
-                <a href="https://github.com/nater6/lem-in" target="_blank">Lemin</a>
-                <a href="https://github.com/nater6/lem-in" target="_blank">GO</a>
-            </div>
-            <div class="indBox">
-                <a href="https://github.com/nater6/mister-quiz" target="_blank">Mister-Quiz</a>
-                <a href="https://github.com/nater6/mister-quiz" target="_blank">PHP</a>
-            </div>
-            <div class="indBox">
-                <a href="https://github.com/codecplyre/real-time-forum" target="_blank">Forum</a>
-                <a href="https://github.com/codecplyre/real-time-forum" target="_blank">GO & JS</a>
-            </div>
+            <button class="indBox" id="makeyourgame" onclick="OpenProjectModal(id)">
+                <p >Make-Your-Game</p>
+                <p>Javascript</p>
+            </button>
+            <button class="indBox" id="lemin" onclick="OpenProjectModal()">
+                <p>Lemin</p>
+                <p>GO</p>
+            </button>
+            <button class="indBox" id="misterquiz" onclick="OpenProjectModal()">
+                <p>Mister-Quiz</p>
+                <p>PHP</p>
+            </button>
+            <button class="indBox" id="forum" onclick="OpenProjectModal()">
+                <p>Forum</p>
+                <p>GO & JS</p>
+            </button>
 
-            <div class="indBox">
-                <a href="https://github.com/nater6/groupie-tracker-visualisations" target="_blank">Groupie Tracker</a>
-                <a href="https://github.com/nater6/groupie-tracker-visualisations" target="_blank">GO</a>
-            </div>
-            <div class="indBox">
-                <a href="https://github.com/nater6/ascii-art-web#readme" target="_blank">Ascii-Art-Web</a>
-                <a href="https://github.com/nater6/ascii-art-web#readme" target="_blank">GO</a>
-            </div>
+            <button class="indBox" id="groupietracker" onclick="OpenProjectModal()">
+                <p>Groupie Tracker</p>
+                <p>GO</p>
+            </button>
+            <button class="indBox" id="asciiartweb" onclick="OpenProjectModal()">
+                <p>Ascii-Art-Web</p>
+                <p>GO</p>
+            </button>
         </div>
-        </section>
+    </section>
+    <section class="pop-up">
+
+    </section>
+    <section class="project-overview">
+        <!-- <div class="project-desc"> -->
+            <div class="pro-title"><p class="pro-name">Title</p><button class="close" onclick="CloseProjectModal()">&#10006;</button></div>
+            <div class="pro-link"><a class="pro-github" target="_blank">See Github Repository</a></div>
+            <div class="pro-langs"><p class="auto">Language Here</p></div>
+            <div class="pro-pics">
+                <div class="screenshot"></div>
+                <div class="screenshot"></div>
+                <div class="screenshot"></div>
+            </div>
+            <div class="pro-desc">
+            This is a description of the project. This is a description of the project. This is a description of the project.
+            This is a description of the project. This is a description of the project. This is a description of the project.
+
+            </div>
+            <div class="pro-details">
+                <div class="pro-list pro-skills">
+                    <p class="list-title">Skills</p>
+                    <ul>
+                        <li>Coding</li>
+                        <li>Design</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Coding</li>
+                        <li>Design</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+
+                    </ul>
+                </div>
+
+                <div class="pro-list pro-features">
+                    <p class="list-title">Features</p>
+                    <ul>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+                        <li>Feature 1</li>
+                        <li>Feature 2</li>
+                        <li>Feature 3</li>
+                        <li>Feature 4</li>
+                        <li>Feature 5</li>
+
+                    </ul>
+                </div>
+            </div>
+        <!-- </div> -->
+
+    </section>
         <script src="home.js"></script>
+        <script src="data.js"></script>
+
     </body>
 </html>

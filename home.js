@@ -1,3 +1,4 @@
+
 function consoleText(text, textID, underscoreID) {
     let letterCount = 1;
     let x = 1;
@@ -44,7 +45,6 @@ let observer = new IntersectionObserver(
     (valChanger) => {
         valChanger.forEach((entry) => {
             if (entry.isIntersecting === true) {
-                console.log('CURRENTLY INTERSECTING: ', entry.target);
                 if (entry.target.classList.contains('hidden')) {
                     entry.target.classList.remove('hidden');
                     entry.target.classList.add('fade');
@@ -57,3 +57,20 @@ let observer = new IntersectionObserver(
 
 const sections = document.querySelectorAll('section');
 sections.forEach((section) => observer.observe(section));
+
+const POP_UP_BACKGROUND = document.querySelector('.pop-up');
+const PROJECT_SEC = document.querySelector('.project-overview');
+
+function OpenProjectModal(project) {
+    POP_UP_BACKGROUND.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    PROJECT_SEC.style.display = 'block';
+    console.log(PROJECTS[project]);
+    
+}
+
+function CloseProjectModal() {
+    POP_UP_BACKGROUND.style.display = 'none';
+    document.body.style.overflowY = 'auto';
+    PROJECT_SEC.style.display = 'none';
+}

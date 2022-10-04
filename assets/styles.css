@@ -8,11 +8,17 @@
     box-sizing: border-box;
     color: white;
     font-family: 'Lexend Deca', sans-serif;
-    padding: 0.5vh;
+    /* padding: 0.5vh; */
+}
+html {
+    min-height: 450px;
+    background-color: #000419;
 }
 body {
+    padding-bottom: 10vh;
     margin: 0;
     width: 100vw;
+    min-height: 450px;
     /* min-width: 750px; */
     background-color: #000419;
     background-attachment: fixed;
@@ -29,6 +35,7 @@ a {
 }
 ::-webkit-scrollbar {
     width: 0.35vw;
+    z-index: 1;
 }
 
 /* Track */
@@ -39,7 +46,7 @@ a {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgb(179, 179, 179);
-    border-radius: 1vh;
+    border-radius: 15px;
 }
 
 /* Handle on hover */
@@ -51,13 +58,14 @@ a {
 
 .navBar {
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     width: 100vw;
-    max-height: 50px;
+    max-height: 45px;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
+    padding: 0;
     background-color: #00041a;
     border-bottom: 0.5vh solid white;
     z-index: 10;
@@ -93,12 +101,13 @@ a {
 
 .center {
     display: flex;
-    height: 60vh;
+    height: 45vh;
     min-height: 275px;
-    width: 100vw;
+    width: fit-content;
     min-width: 600px;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .profilePic {
@@ -118,9 +127,10 @@ a {
 .display-pic {
     height: 40vmin;
     min-height: 210px;
+    max-height: 230px;
     width: 40vmin;
     min-width: 210px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 230px;
 }
 
 .profile-details {
@@ -153,6 +163,7 @@ a {
 .stack {
     height: 20vh;
     min-width: 700px;
+    min-height: 125px;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
@@ -170,6 +181,7 @@ a {
     height: 7vh;
     min-height: 35px;
     border-bottom: 5px solid #b9b9b9dd;
+    margin-bottom: 10px;
 }
 
 .right {
@@ -179,6 +191,10 @@ a {
 .half-text {
     font-size: 125%;
     font-weight: bold;
+}
+
+.gap {
+    margin-right: 3px;
 }
 
 .flex {
@@ -194,6 +210,10 @@ a {
     margin-right: auto;
 }
 
+.auto {
+    margin: auto;
+}
+
 .gql-logo {
     height: 25px;
     width: 25px;
@@ -203,7 +223,7 @@ a {
     height: 40%;
     width: 70%;
     min-width: 600px;
-    margin: 0 auto;
+    margin: 1vh auto;
     text-align: center;
     padding-bottom: 3vh;
 }
@@ -211,16 +231,18 @@ a {
 .aboutTitle {
     display: flex;
     justify-content: center;
-    width: 10vw;
+    width: 40vw;
     min-width: 175px;
     /* color: #b9b9b9dd; */
-    font-size: 32px;
+    font-size: 28px;
     margin: 0 auto;
 }
 
 .aboutPara {
+    width: 50vw;
     margin: 0.25vh auto;
     border: 5px solid rgba(0, 0, 0, 0);
+    color: #b9b9b9dd;
 }
 
 .details {
@@ -247,6 +269,7 @@ a {
     text-align: center;
     border-radius: 60px;
     word-wrap: break-word;
+    background-color: #00041a;
 }
 
 .indBox:hover {
@@ -272,6 +295,7 @@ a {
 }
 
 .fade {
+    margin: 2.5vh 0;
     animation-name: fade-in;
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -288,37 +312,168 @@ a {
     }
 }
 
+.pop-up {
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2;
+}
+
+.project-overview {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 150ms ease-in;
+    margin: 2.5vh auto;
+    justify-content: center;
+    background-color: #000524;
+    border-radius: 8px;
+    z-index: 3;
+    /* border: 3px solid white; */
+    width: 60vw;
+    min-width: 475px;
+    height: 80vh;
+    min-height: 375px;
+    overflow-x: hidden;
+}
+
+.pro-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 3%;
+    padding-right: 0;
+    width: 100%;
+    margin: 1vh auto;
+    font-size: 28px;
+}
+
+.pro-name {
+    margin: auto;
+}
+
+.close {
+    height: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+    margin-top: -10px;
+    transform: scale(1.3);
+}
+
+.pro-link {
+    width: fit-content;
+    margin: auto;
+}
+
+.pro-github {
+    width: fit-content;
+    color: #b9b9b9dd;
+    text-decoration: underline;
+}
+
+.pro-langs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    width: max-content;
+    border: 2px solid white;
+    border-radius: 7px;
+    height: 7%;
+    min-height: 30px;
+    padding: 0 1%;
+}
+
+.pro-pics {
+    height: fit-content;
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+
+.screenshot {
+    height: 90%;
+    min-height: 100px;
+    width: 30%;
+    min-width: 33px;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.pro-desc {
+    margin: 3vh auto;
+    width: 80%;
+    height: fit-content;
+    text-align: center;
+}
+
+.pro-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5vh auto;
+    width: 70%;
+    height: fit-content;
+    min-height: 225px;
+}
+
+.pro-list {
+    height: 200px;
+    width: 40%;
+    min-width: 150px;
+    overflow-y: auto;
+    border: 3px solid #b9b9b9dd;
+    border-radius: 5px;
+}
+
+.pro-list::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+.list-title {
+    width: fit-content;
+    margin: 1vh auto;
+    border-bottom: 2px solid white;
+}
+
 @media all and (max-width: 480px) {
     html {
         width: 100vw;
         height: 100vh;
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
     body {
         width: 100vw;
         max-width: 480px;
         height: 100vh;
-        /* overflow-x: hidden; */
+        overflow-x: hidden;
     }
 
     .navBar {
         width: 100%;
     }
 
-    .title{
+    .title {
+        padding-left: 2%;
         font-size: 14px;
     }
 
     .center {
-        display: block;
+        display: flex;
         min-width: 0px;
-        width: 100%; 
-        min-height: 0px;
-        height: 55%;
+        width: 100%;
+        min-height: 170px;
+        height: 25%;
         margin: 0;
         margin-bottom: 2vh;
     }
-
 
     .display-pic {
         /* width: 20%; */
@@ -326,7 +481,7 @@ a {
         min-height: 0;
         height: 125px;
         width: 125px;
-        margin: 10vh auto 0 auto;
+        margin: 3vh auto 0 20px;
     }
 
     .profile-details {
@@ -334,33 +489,33 @@ a {
         min-height: 0;
         width: 100%;
         margin: auto;
-        max-height: 200px;
+        height: 150px;
     }
 
-    .detail-text{
+    .detail-text {
+        margin-top: -2vh;
         font-size: 20px;
     }
 
-    .console-underscore{
+    .console-underscore {
         font-size: 20px;
     }
 
     .console-container {
-        margin: -20px auto 0 auto;
+        margin: 0;
         min-width: 0;
         min-height: 0;
         height: 40px;
     }
 
     .stack {
-        margin-top: 2vh;
         min-width: 0;
         min-height: 0;
         width: 100%;
-        height: 30%;
+        height: 25%;
     }
 
-    .langs{
+    .langs {
         min-width: 0;
         min-height: 0;
     }
@@ -370,12 +525,37 @@ a {
         min-height: 0;
     }
 
-    .flex{
+    .lang-title {
+        margin-bottom: 5px;
+    }
+
+    .flex {
         display: block;
     }
 
+    .right-auto {
+        height: 25px;
+        line-height: 25px;
+        margin: auto;
+        width: fit-content;
+    }
+
+    .left-auto {
+        margin: 5px auto;
+        width: fit-content;
+    }
+
     .gql-logo {
-        display: none;
+        /* display: none; */
+        height: 10;
+    }
+
+    .gql {
+        height: fit-content;
+    }
+
+    .same {
+        display: flex;
     }
 
     .fade {
@@ -383,17 +563,49 @@ a {
         min-height: 0;
     }
 
-    .about{
+    .about {
         min-width: 0;
         min-height: 0;
         width: 100%;
     }
 
-    .aboutPara{
+    .aboutPara {
+        width: 80%;
         font-size: 14px;
     }
 
     .indBox {
         width: 75px;
+    }
+
+    .project-overview {
+        width: 85vw;
+        min-width: 0;
+        height: 95vh;
+        min-height: 0;
+        margin-top: 2.5vh;
+    }
+
+    .pro-pics {
+        display: block;
+    }
+
+    .close {
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .screenshot {
+        width: 75%;
+        height: 50%;
+        margin: 1vh auto;
+    }
+
+    .pro-details {
+        display: block;
+    }
+
+    .pro-list {
+        margin: 1vh auto;
     }
 }
