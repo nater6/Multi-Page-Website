@@ -195,6 +195,10 @@ a {
 }
 
 .gap {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     margin-right: 3px;
 }
 
@@ -238,6 +242,15 @@ a {
     /* color: #b9b9b9dd; */
     font-size: 28px;
     margin: 0 auto;
+}
+
+.projectsTitle{
+    width: fit-content;
+    margin: 1% auto 0;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+
 }
 
 .aboutPara {
@@ -404,10 +417,16 @@ a {
 }
 
 .screenshot {
-    height: 100px;
-    width: 200px;
-    background-color: aliceblue;
+    height: 150px;
+    width: 300px;
     margin: 1vh auto;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 15px;
 }
 
 .pro-desc {

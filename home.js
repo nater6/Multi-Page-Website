@@ -67,7 +67,11 @@ const TITLE = document.querySelector('#pop-up-title'),
 REPO = document.querySelector('#pop-up-repo'),
 LANG = document.querySelector('#pop-up-lang'),
 DESC = document.querySelector('#pop-up-desc'),
-SKILLS = document.querySelector('#pop-up-skills')
+SKILLS = document.querySelector('#pop-up-skills'),
+IMG_ONE = document.querySelector('#imgOne'),
+IMG_TWO = document.querySelector('#imgTwo'),
+IMG_THREE = document.querySelector('#imgThree')
+
 
 //FillPopUp populates the pop up with the information for a specific oroject
 function FillPopUp(obj) {
@@ -77,7 +81,29 @@ function FillPopUp(obj) {
     LANG.innerHTML = obj.lang
     DESC.innerHTML = obj.description
     CreateList(obj.skills)
+    SetImages(obj.images)
 }
+
+function SetImages(arr) {
+    //Loop through the array of objects
+    arr.forEach((elem, i) => {
+
+        switch (i) {
+            case 0:
+                IMG_ONE.setAttribute("src", `assets/images/${elem}`)
+                break;
+            case 1:
+                IMG_TWO.setAttribute("src", `assets/images/${elem}`)
+                break;
+            case 2:
+                IMG_THREE.setAttribute("src", `assets/images/${elem}`)
+                break;
+            default:
+                break;
+        }
+    })
+}
+
 
 //CreateList creates a HTML list with the skills from the array argument
 function CreateList(arr){

@@ -47,7 +47,7 @@
                     <div class="langs">
                          <div class="experience-holders" >
                              <p class="lang-title"><span class="half-text" >Experience</span></p>
-                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php gap"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database gap"></i>SQL</p><p class="right-auto flex same"><img class="gql-logo gap" src="./assets/images/gql-logo.png"><span class="gql">graphQL</span></p><p class="right-auto flex same"><i class="fa-brands fa-docker"></i><span class="gql">Docker</span></p></div>
+                             <div class="flex"><p class="right-auto flex"><i class="fa-brands fa-php gap"></i>PHP</p><p class="right-auto flex"><i class="fa-solid fa-database gap"></i>SQL</p><p class="right-auto flex same"><img class="gql-logo gap" src="./assets/images/gql-logo.png"><span class="gql flex">graphQL</span></p><p class="right-auto flex same"><i class="fa-brands fa-docker gap"></i><span class="gql flex">Docker</span></p></div>
                          </div>
                     </div>
                 </section>
@@ -64,38 +64,45 @@
         <section class="hidden">
 
         <div class="details">
-            <h1 class="aboutTitle">Projects</h1>
+            <h1 class="aboutTitle">Experience</h1>
+            <h3 class="projectsTitle">Projects</h3>
         </div>
         <div class="Carousel">
+            <button class="indBox" id="forum" onclick="OpenProjectModal(id)">
+                <p>Forum</p>
+                <p>GO & JS</p>
+            </button>
+
             <button class="indBox" id="makeyourgame" onclick="OpenProjectModal(id)">
                 <p >Make-Your-Game</p>
                 <p>Javascript</p>
             </button>
+
             <button class="indBox" id="lemin" onclick="OpenProjectModal(id)">
                 <p>Lemin</p>
                 <p>GO</p>
             </button>
+                 
+            <button class="indBox" id="graphQL" onclick="OpenProjectModal(id)">
+                <p>GraphQL</p>
+                <p>React</p>
+            </button>
+
             <button class="indBox" id="misterquiz" onclick="OpenProjectModal(id)">
                 <p>Mister-Quiz</p>
                 <p>PHP</p>
-            </button>
-            <button class="indBox" id="forum" onclick="OpenProjectModal(id)">
-                <p>Forum</p>
-                <p>GO & JS</p>
             </button>
 
             <button class="indBox" id="groupietracker" onclick="OpenProjectModal(id)">
                 <p>Groupie Tracker</p>
                 <p>GO</p>
             </button>
+
             <button class="indBox" id="asciiartweb" onclick="OpenProjectModal(id)">
                 <p>Ascii-Art-Web</p>
                 <p>GO</p>
             </button>
-            <button class="indBox" id="graphQL" onclick="OpenProjectModal(id)">
-                <p>GraphQL</p>
-                <p>React</p>
-            </button>
+       
         </div>
     </section>
     <section class="pop-up">
@@ -107,9 +114,9 @@
             <div class="pro-link"><a class="pro-github" target="_blank" id="pop-up-repo">See Github Repository</a></div>
             <div class="pro-langs"><p class="auto" id="pop-up-lang"></p></div>
             <div class="pro-pics" id="pop-up-pics">
-                <div class="screenshot"></div>
-                <div class="screenshot"></div>
-                <div class="screenshot"></div>
+                <div class="screenshot"><img id="imgOne" /></div>
+                <div class="screenshot"><img id="imgTwo" /></div>
+                <div class="screenshot"><img id="imgThree" /></div>
             </div>
             <div class="pro-desc" id="pop-up-desc">
             </div>

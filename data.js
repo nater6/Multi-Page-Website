@@ -3,7 +3,7 @@ const PROJECTS = {
         name: 'Make Your Game',
         repo: 'https://github.com/nater6/make-your-game-score-handling',
         lang: 'GoLang Javascript',
-        images: ['', '', ''],
+        images: ['make-your-game/myg_one.png', 'make-your-game/myg_two.png', 'make-your-game/myg_three.png'],
         description: `The objective of this project was to remake the classic donkey kong game. The game runs at 60 FPS and uses RequestAnimationFrame. When the player finishes they can 
         input their results into the leaderboard and see how their results compare. The game doesn't use canvas or any frameworks, so I could get used to manipulating DOM with vanilla JavaScript.`,
         skills: ['DOM', 'Event Loop', 'Dev Tools', 'HTML', 'CSS'],
@@ -69,8 +69,8 @@ const PROJECTS = {
         name: 'GraphQL',
         repo:'https://github.com/nater6/graphql',
         lang: 'Javascript',
-        images: ['', '', ''],
+        images: ['graphql/graphql_one.png', 'graphql/graphql_two.png', 'graphql/graphql_three.png'],
         description:`In  this project a graphQL endpoint is queried and the data recieved is displayed in a user interface, created with React. This project can be viewed at<a target='_blank' href='https://sage-raindrop-943a69.netlify.app'>this Website .</a>`,
-        skills: ['GraphQL', 'GraphIQL', 'Hosting', 'React', 'Apollo', 'SVGs', 'CSS' ],
+        skills: ['GraphQL', 'GraphIQL', 'Hosting', 'React', 'Apollo', 'SVG', 'CSS' ],
     }
 };
