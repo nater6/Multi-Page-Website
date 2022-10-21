@@ -28,7 +28,7 @@ const PROJECTS = {
         name: 'Forum',
         repo: 'https://github.com/codecplyre/real-time-forum',
         lang: 'GoLang Javascript',
-        images: ['', '', ''],
+        images: ['real-time-forum/rtf_one.png', 'real-time-forum/rtf_two.png', 'real-time-forum/rtf_three.png'],
         description: `This project was to make a forum for coding students. Users can make posts, comment and message other users. As well as that, users can filter through
         posts, by category, and select favourites. Messages are sent in real time. Users are notified when the chat recipient is
         typing and when they recieve a message.`,

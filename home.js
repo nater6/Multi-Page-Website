@@ -6,7 +6,8 @@ function consoleText(text, textID, underscoreID) {
     let target = document.getElementById(textID[0]);
     let done = 0;
     let typing = window.setInterval(function () {
-        if (letterCount === 0 && waiting === false) {
+        
+        if (letterCount === 0 && !waiting) {
             waiting = true;
             target.innerHTML = words[0].substring(0, letterCount);
             window.setTimeout(function () {
@@ -14,7 +15,7 @@ function consoleText(text, textID, underscoreID) {
                 letterCount += x;
                 waiting = false;
             }, 1000);
-        } else if (waiting === false) {
+        } else if (!waiting) {
             done++;
             target.innerHTML = text[0].substring(0, letterCount);
             letterCount += x;
@@ -81,7 +82,27 @@ function FillPopUp(obj) {
     LANG.innerHTML = obj.lang
     DESC.innerHTML = obj.description
     CreateList(obj.skills)
+    DisplayImgs(obj.name)
     SetImages(obj.images)
+}
+
+function DisplayImgs(project){
+    console.log(project)
+    const SCREENSHOTS = document.querySelectorAll('.screenshot')
+    if (project === 'Lemin') {
+        //Hide Images
+        SCREENSHOTS.forEach(elem => {
+            elem.style.display='none'
+        })
+
+    } else{
+        //Display Images
+        SCREENSHOTS.forEach(elem => {
+            elem.style.display='block'
+        })
+
+    }
+
 }
 
 function SetImages(arr) {

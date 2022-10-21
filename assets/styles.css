@@ -11,15 +11,14 @@
     /* padding: 0.5vh; */
 }
 html {
-    min-height: 450px;
-    background-color: #000419;
+    height: 100vh;
+    width: 100vw;
 }
 body {
     padding-bottom: 10vh;
     margin: 0;
-    width: 100vw;
-    min-height: 450px;
-    /* min-width: 750px; */
+    width: 100%;
+    height: 100%;
     background-color: #000419;
     background-attachment: fixed;
     overflow-x: hidden;
@@ -101,13 +100,14 @@ a {
 
 .center {
     display: flex;
-    height: 45vh;
+    height: 45%;
     min-height: 275px;
     width: fit-content;
-    min-width: 600px;
+    min-width: 400px;
     justify-content: center;
     align-items: center;
     margin: auto;
+    padding: 1%;
 }
 
 .profilePic {
@@ -135,16 +135,19 @@ a {
 }
 
 .profile-details {
-    width: 60%;
-    min-width: 650px;
+    width: 100%;
+    /* min-width: 400px; */
     margin-left: 1vw;
+}
+.detail-text{
+    font-size: 85%;
 }
 
 .console-container {
     font-size: 4em;
     text-align: center;
     height: fit-content;
-    width: 90%;
+    width: 100%;
 }
 .console-underscore {
     display: inline-block;
@@ -163,11 +166,15 @@ a {
 
 .stack {
     height: fit-content;
-    min-width: 700px;
+    /* min-width: 700px; */
+    width: 100%;
     min-height: 125px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     grid-template-columns: 50% 50%;
     justify-items: center;
+    margin: auto;
 }
 
 .langs {
@@ -268,7 +275,8 @@ a {
     margin: auto;
     margin-bottom: 5vh;
     height: 35%;
-    width: 70%;
+    width: fit-content;
+    max-width: 70%;
     overflow: auto;
     white-space: nowrap;
     padding-bottom: 25px;
@@ -276,8 +284,8 @@ a {
 
 .indBox {
     display: inline-block;
-    height: 75%;
-    width: 20%;
+    height: 100%;
+    width: 25%;
     min-width: 200px;
     border: 0.25vh solid white;
     margin: 2vh;
@@ -285,6 +293,7 @@ a {
     border-radius: 60px;
     word-wrap: break-word;
     background-color: #00041a;
+    padding: 0.5%;
 }
 
 .indBox:hover {
@@ -341,6 +350,8 @@ a {
 
 .project-overview {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -466,6 +477,12 @@ img {
     border-bottom: 2px solid white;
 }
 
+.popUpHolder{
+    height: fit-content;
+    width: fit-content;
+
+}
+
 @media all and (max-width: 480px) {
     html {
         width: 100vw;
@@ -536,7 +553,7 @@ img {
         min-width: 0;
         min-height: 0;
         width: 100%;
-        height: 20vh;
+        height: 20%;
     }
 
     .langs {
@@ -555,6 +572,10 @@ img {
 
     .flex {
         display: block;
+    }
+
+    .media-flex{
+        display: flex
     }
 
     .right-auto {
@@ -634,4 +655,5 @@ img {
     .pro-list {
         margin: 1vh auto;
     }
+
 }
