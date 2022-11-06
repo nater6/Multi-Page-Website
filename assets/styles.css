@@ -100,7 +100,7 @@ a {
 
 .center {
     display: flex;
-    height: 45%;
+    height: fit-content;
     min-height: 275px;
     width: fit-content;
     min-width: 400px;
@@ -235,7 +235,7 @@ a {
 .about {
     height: 40%;
     width: 70%;
-    min-width: 600px;
+    /* min-width: 600px; */
     margin: 2.5vh auto;
     text-align: center;
     padding-bottom: 3vh;
