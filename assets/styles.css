@@ -309,6 +309,7 @@ a {
     word-wrap: break-word;
     background-color: #00041a;
     padding: 0.5%;
+    text-decoration: none;
 }
 
 .indBox:hover {
