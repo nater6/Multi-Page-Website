@@ -453,8 +453,6 @@ a {
 .display-pic {
     height: 100%;
     width: 100%;
-    /* border: 2px solid white; */
-    border-radius: 15px;
 }
 
 .pro-desc {
