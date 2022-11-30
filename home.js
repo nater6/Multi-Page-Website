@@ -73,18 +73,7 @@ IMG_ONE = document.querySelector('#imgOne'),
 IMG_TWO = document.querySelector('#imgTwo'),
 IMG_THREE = document.querySelector('#imgThree')
 
-
 //FillPopUp populates the pop up with the information for a specific oroject
-function FillPopUp(obj) {
-    TITLE.innerHTML = obj.name
-    REPO.innerHTML = obj.repo
-    REPO.href = obj.repo
-    LANG.innerHTML = obj.lang
-    DESC.innerHTML = obj.description
-    CreateList(obj.skills)
-    DisplayImgs(obj.name)
-    SetImages(obj.images)
-}
 
 function DisplayImgs(project){
     console.log(project)
@@ -127,17 +116,7 @@ function SetImages(arr) {
 
 
 //CreateList creates a HTML list with the skills from the array argument
-function CreateList(arr){
-    const OLD_ITEMS = document.querySelectorAll('#pop-up-skills-list-item')
-    OLD_ITEMS.forEach(element => element.remove());
 
-    arr.forEach(skill => {
-        const ITEM = document.createElement('li')
-        ITEM.setAttribute('class', 'pop-up-skill-list-item')
-        ITEM.innerHTML = skill
-        SKILLS.appendChild(ITEM)
-    })
-}
 
 function OpenProjectModal(project) {
     POP_UP_BACKGROUND.style.display = 'block';
