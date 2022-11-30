@@ -85,14 +85,13 @@ a {
     color: white;
 }
 
-.fa-envelope {
+.fa-envelope, .fa-file {
     font-size: 200%;
     color: white;
 }
 
 .title {
     margin: 50px 0;
-    /* width: 25vw; */
     font-family: 'Silkscreen', cursive;
 }
 
@@ -253,7 +252,7 @@ a {
 
 .div-stat img {
     margin: 1vh auto;
-    height: 18vh;
+    height: 19vh;
 }
 
 .aboutTitle {
