@@ -115,21 +115,3 @@ function SetImages(arr) {
 }
 
 
-//CreateList creates a HTML list with the skills from the array argument
-
-
-function OpenProjectModal(project) {
-    POP_UP_BACKGROUND.style.display = 'block';
-    document.body.style.overflow = 'hidden';
-    PROJECT_SEC.style.display = 'block';
-    // console.log(PROJECTS[project]);
-    FillPopUp(PROJECTS[project])
-}
-
-function CloseProjectModal() {
-    POP_UP_BACKGROUND.style.display = 'none';
-    document.body.style.overflowY = 'auto';
-    PROJECT_SEC.style.display = 'none';
-    //Clear the skills list
-    SKILLS.innerHTML='';
-}
