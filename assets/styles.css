@@ -8,7 +8,6 @@
     box-sizing: border-box;
     color: white;
     font-family: 'Lexend Deca', sans-serif;
-    /* padding: 0.5vh; */
 }
 html {
     height: 100vh;
@@ -57,7 +56,6 @@ a {
 
 .navBar {
     display: flex;
-    /* position: fixed; */
     width: 100vw;
     max-height: 45px;
     justify-content: center;
@@ -85,7 +83,8 @@ a {
     color: white;
 }
 
-.fa-envelope, .fa-file {
+.fa-envelope,
+.fa-file {
     font-size: 200%;
     color: white;
 }
@@ -577,8 +576,6 @@ a {
         margin-bottom: 5px;
     }
 
-   
-
     .media-flex {
         display: flex;
     }
@@ -597,7 +594,6 @@ a {
     }
 
     .gql-logo {
-        /* display: none; */
         height: 10;
     }
 
@@ -608,8 +604,6 @@ a {
     .same {
         display: flex;
     }
-
-   
 
     .fade {
         min-width: 0;
