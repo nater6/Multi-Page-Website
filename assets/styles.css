@@ -163,7 +163,6 @@ a {
 
 .stack {
     height: fit-content;
-    /* min-width: 700px; */
     width: 100%;
     min-height: 125px;
     display: flex;
@@ -232,7 +231,6 @@ a {
 .about {
     height: 40%;
     width: 70%;
-    /* min-width: 600px; */
     margin: 4vh auto;
     text-align: center;
 }
