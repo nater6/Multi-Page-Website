@@ -72,6 +72,20 @@ a {
     color: white;
     margin: 25px;
 }
+.resume_link{
+    text-decoration: none;
+    background-color: white;
+    color: #000419;
+    padding: 0.35%;
+    border-radius: 15px;
+}
+
+.resume_link:hover {
+    text-decoration: underline;
+    background-color: #000419;
+    color: white;
+    transition: 0.5s;
+}
 
 .fa-square-github {
     font-size: 200%;
